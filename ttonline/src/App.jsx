@@ -1,20 +1,19 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import Homepage from "./pages/Homepage"
-import Header from "./components/Header"
-import Footer from "./components/Footer"
+import PetitionPage from "./pages/PetitionPage"
 
+import Navbar from "./components/Navbar"
 
-function App() {
-
+const App = () => {
   return (
     <>
-     <BrowserRouter>
-     <Header/>
-      <Routes>
-        <Route path="/" element={<Homepage/>} exact/>
-      </Routes>
-      <Footer/>
-     </BrowserRouter>
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Homepage />} exact />
+          <Route path="/petitions" element={<PetitionPage />} />
+        </Routes>
+      </BrowserRouter>
     </>
   )
 }
