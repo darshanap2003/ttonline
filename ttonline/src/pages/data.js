@@ -1,48 +1,48 @@
-import image1 from "../../assets/image1.jpg"
-import image2 from "../../assets/image2.jpg"
-import image3 from "../../assets/image3.jpg"
-import image4 from "../../assets/image4.jpg"
-import image5 from "../../assets/image5.jpg"
+import image1 from "../../assets/image1.jpg";
+import image2 from "../../assets/image2.jpg";
+import image3 from "../../assets/image3.jpg";
+import image4 from "../../assets/image4.jpg";
+import image5 from "../../assets/image5.jpg";
 
 export const petitions = [
   {
     id: 1,
-    countryCode: "IN",
-    title: "Support Clean Energy Initiatives",
+    countryCode: "US",
+    title: "Close the Gender Pay Gap",
     description:
-      "Join us in advocating for cleaner and more sustainable energy sources to combat climate change.",
+      "Join the movement to advocate for equal pay for equal work, regardless of gender.",
     img: image1,
   },
   {
     id: 2,
-    countryCode: "IN",
-    title: "Equal Pay for Equal Work",
+    countryCode: "UK",
+    title: "End Wage Discrimination",
     description:
-      "Demand fair compensation for all workers, regardless of gender or background.",
+      "Demand an end to wage discrimination based on gender, and create fair and equitable workplaces.",
     img: image2,
   },
   {
     id: 3,
-    countryCode: "CN",
-    title: "Affordable Housing for All",
+    countryCode: "AU",
+    title: "Empower Women in the Workplace",
     description:
-      "Let's work together to ensure everyone has access to safe and affordable housing options.",
+      "Support initiatives that empower women in the workplace and promote gender equality in all industries.",
     img: image3,
   },
   {
     id: 4,
-    countryCode: "US",
-    title: "Promote Mental Health Awareness",
+    countryCode: "CA",
+    title: "Transparency in Pay Structure",
     description:
-      "Raise awareness and reduce the stigma surrounding mental health issues in our community.",
+      "Advocate for transparency in pay structure to identify and address any gender pay disparities.",
     img: image4,
   },
   {
     id: 5,
-    countryCode: "US",
-    title: "Support Local Food Banks",
+    countryCode: "IN",
+    title: "Equal Opportunities for All",
     description:
-      "Help provide nutritious meals to families in need by supporting your local food bank.",
+      "Work towards creating equal opportunities and fair wages for everyone, regardless of gender.",
     img: image5,
   },
-]
+];
