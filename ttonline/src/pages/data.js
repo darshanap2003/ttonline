@@ -43,6 +43,6 @@ export const petitions = [
     title: "Support Local Food Banks",
     description:
       "Help provide nutritious meals to families in need by supporting your local food bank.",
-    img: image1,
+    img: image5,
   },
 ]

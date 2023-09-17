@@ -10,7 +10,7 @@ function PetitionCard({ img, title, description }) {
           </div>
         </div>
         <button className="bg-blue-500 py-2 rounded-md text-md font-bold text-white">
-          Know More
+          Sign the petition
         </button>
       </div>
     </>
