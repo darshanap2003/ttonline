@@ -4,6 +4,9 @@ export default {
   purge: ['./src/**/*.{js,jsx}', './index.html'],
   theme: {
     extend: {
+      fontFamily: {
+        poppins: ["Poppins", "sans-serif"],
+      },
       colors: {
         primary: {
           50: '#FDFDFE',
@@ -46,4 +49,3 @@ export default {
 },
 plugins: [],
 }
-
