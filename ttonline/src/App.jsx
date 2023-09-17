@@ -7,6 +7,7 @@ import About from "./pages/About"
 import Homepage from "./pages/Homepage"
 import Resources from "./pages/Resources"
 import PetitionDetails from "./components/PetitionDetails"
+import Profile from "./pages/Profile"
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
           <Route path="/about" element={<About />} exact />
           <Route path="/resources" element={<Resources />} exact />
           <Route path="/petition/:id" element={<PetitionDetails/>} exact/>
+          <Route path="/profile" element={<Profile />} exact />
         </Routes>
         <Footer />
       </BrowserRouter>
