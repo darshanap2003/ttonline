@@ -1,38 +1,39 @@
 import React, { useState } from "react";
-import { useAuth0 } from "@auth0/auth0-react";
 import Confetti from "react-confetti";
 
-const PetitionDetail = ({ petition }) => {
-  const { user, isAuthenticated } = useAuth0();
-  const [signed, setSigned] = useState(petition.signed);
-  const [comments, setComments] = useState(petition.comments);
+const PetitionDetails = () => {
+  const [signed, setSigned] = useState(false);
+  const [comments, setComments] = useState([]);
   const [newComment, setNewComment] = useState("");
 
   const handleSignPetition = () => {
-    if (isAuthenticated) {
-      setSigned(true);
-    }
+    setSigned(true);
   };
 
   const handleCommentSubmit = () => {
-    if (isAuthenticated && newComment.trim() !== "") {
-      const updatedComments = [...comments, { user: user.name, comment: newComment }];
-      setComments(updatedComments);
+    if (newComment.trim() !== "") {
+      setComments([...comments, { user: "John Doe", comment: newComment }]);
       setNewComment("");
     }
   };
 
   return (
-    <div>
-      <img src={petition.img} alt="Petition Image" />
-      <h1>{petition.title}</h1>
-      <p>{petition.description}</p>
+    <div style={{ textAlign: "center", marginTop: "50px" }}>
+      <img
+        src="https://via.placeholder.com/300x200"
+        alt="Sample Petition"
+      />
+      <h1>Sample Petition Title</h1>
+      <p>
+        This is a sample petition description. Lorem ipsum dolor sit amet,
+        consectetur adipiscing elit.
+      </p>
       {signed ? (
         <Confetti />
       ) : (
         <button onClick={handleSignPetition}>Sign the petition</button>
       )}
-      {signed && <p>Signed by: {petition.signatures.join(", ")}</p>}
+      {signed && <p>Signed by: John Doe</p>}
 
       <div>
         <h2>Comments</h2>
@@ -56,4 +57,4 @@ const PetitionDetail = ({ petition }) => {
   );
 };
 
-export default PetitionDetail;
+export default PetitionDetails;
