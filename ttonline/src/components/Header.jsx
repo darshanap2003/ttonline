@@ -2,12 +2,14 @@ import { useAuth0 } from '@auth0/auth0-react';
 import { Link } from 'react-router-dom';
 
 const Header = () => {
-  const { isAuthenticated, loginWithPopup,logout } = useAuth0();
+  const { isAuthenticated, loginWithPopup, logout } = useAuth0();
   return (
     <header className="bg-primary-500 py-4">
       <div className="container mx-auto flex items-center justify-between">
         {/* Logo */}
-        <h1 className="text-white text-2xl font-bold">Gender Pay Equality</h1>
+        <Link to="/">
+          <h1 className="text-white text-2xl font-bold">Pay Parity Hub</h1>
+        </Link>
         {/* Navigation */}
         <nav>
           <ul className="flex space-x-4">
