@@ -1,4 +1,12 @@
-function PetitionCard({ img, title, description }) {
+import { useNavigate } from "react-router-dom";
+
+function PetitionCard({ img, title, description, id }) {
+  const navigate = useNavigate();
+
+  const handleSignPetition = () => {
+    navigate(`/petition/${id}`);
+  };
+
   return (
     <>
       <div className="p-3 w-[25rem] flex flex-col gap-4 justify-between font-poppins bg-slate-200 rounded-lg">
@@ -9,12 +17,15 @@ function PetitionCard({ img, title, description }) {
             <p className="text-md">{description}</p>
           </div>
         </div>
-        <button className="bg-blue-500 py-2 rounded-md text-md font-bold text-white">
+        <button
+          onClick={handleSignPetition}
+          className="bg-blue-500 py-2 rounded-md text-md font-bold text-white"
+        >
           Sign the petition
         </button>
       </div>
     </>
-  )
+  );
 }
 
-export default PetitionCard
+export default PetitionCard;

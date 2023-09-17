@@ -11,7 +11,6 @@ import Select from "react-dropdown-select"
 
 function PetitionPage() {
   useEffect(() => {
-    // Scroll to the top when the component mounts
     window.scrollTo(0, 0)
   }, [])
   const [countryCode, setCountryCode] = useState("null")
@@ -26,6 +25,7 @@ function PetitionPage() {
         img={petition.img}
         title={petition.title}
         description={petition.description}
+        id={petition.id}
       />
     )
   })

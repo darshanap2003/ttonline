@@ -6,6 +6,8 @@ import PetitionPage from "./pages/PetitionPage"
 import About from "./pages/About"
 import Homepage from "./pages/Homepage"
 import Resources from "./pages/Resources"
+import PetitionDetails from "./components/PetitionDetails"
+
 const App = () => {
   return (
     <>
@@ -17,6 +19,7 @@ const App = () => {
           <Route path="/petition" element={<PetitionPage />} exact />
           <Route path="/about" element={<About />} exact />
           <Route path="/resources" element={<Resources />} exact />
+          <Route path="/petition/:id" element={<PetitionDetails/>} exact/>
         </Routes>
         <Footer />
       </BrowserRouter>
