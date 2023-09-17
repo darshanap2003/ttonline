@@ -74,7 +74,7 @@ const Landing = () => {
               </p>
               <div className="mt-4">
                 <Link
-                  to="/petitions"
+                  to="/petition"
                   className="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-md transition duration-300"
                 >
                   Learn More

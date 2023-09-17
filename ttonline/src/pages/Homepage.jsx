@@ -1,8 +1,13 @@
 import WorldMap from "../components/WorldMap"
 import CountryInfo from "../components/CountryInfo"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 
 const Homepage = () => {
+  useEffect(() => {
+    // Scroll to the top when the component mounts
+    window.scrollTo(0, 0)
+  }, [])
+
   const [selectedCountry, setSelectedCountry] = useState(null)
 
   const handleRegionClick = (event, code) => {

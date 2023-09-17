@@ -6,10 +6,14 @@
 import { petitions } from "./data"
 import { countryDropdown } from "../components/Countries"
 import PetitionCard from "../components/PetitionCard"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Select from "react-dropdown-select"
 
 function PetitionPage() {
+  useEffect(() => {
+    // Scroll to the top when the component mounts
+    window.scrollTo(0, 0)
+  }, [])
   const [countryCode, setCountryCode] = useState("null")
   const filteredPetitions = petitions.filter((petition) => {
     return countryCode !== "null" ? petition.countryCode === countryCode : true

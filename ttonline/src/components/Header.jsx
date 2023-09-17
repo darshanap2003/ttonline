@@ -1,5 +1,5 @@
 import { useAuth0 } from "@auth0/auth0-react"
-import { Link } from "react-router-dom"
+import { NavLink } from "react-router-dom"
 
 const Header = () => {
   const { isAuthenticated, loginWithPopup, logout } = useAuth0()
@@ -7,50 +7,70 @@ const Header = () => {
     <header className="bg-primary-500 py-4 px-5">
       <div className="container mx-auto flex items-center justify-between">
         {/* Logo */}
-        <Link to="/">
+        <NavLink to="/">
           <h1 className="text-white text-2xl font-bold">Pay Parity Hub</h1>
-        </Link>
+        </NavLink>
         {/* Navigation */}
         <nav>
           <ul className="flex space-x-4">
             <li>
-              <Link
+              <NavLink
+                to="/"
+                className="text-white hover:text-gray-200 transition duration-300 pb-0.5"
+                style={({ isActive }) => ({
+                  borderBottom: isActive ? "2px solid white" : "none",
+                })}
+              >
+                Home
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
                 to="/about"
-                className="text-white hover:text-gray-200 transition duration-300"
+                className="text-white hover:text-gray-200 transition duration-300 pb-0.5"
+                style={({ isActive }) => ({
+                  borderBottom: isActive ? "2px solid white" : "none",
+                })}
               >
                 About
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link
+              <NavLink
                 to="/petition"
-                className="text-white hover:text-gray-200 transition duration-300"
+                className="text-white hover:text-gray-200 transition duration-300 pb-0.5"
+                style={({ isActive }) => ({
+                  borderBottom: isActive ? "2px solid white" : "none",
+                })}
               >
                 Sign Petition
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link
+              <NavLink
                 to="/resources"
-                className="text-white hover:text-gray-200 transition duration-300"
+                className="text-white hover:text-gray-200 transition duration-300 pb-0.5"
+                style={({ isActive }) => ({
+                  borderBottom: isActive ? "2px solid white" : "none",
+                })}
               >
                 Resources
-              </Link>
+              </NavLink>
             </li>
             {/* Auth0 */}
             {isAuthenticated ? (
               <ul className="flex space-x-4">
                 <li>
-                  <Link
+                  <NavLink
                     to="/profile"
-                    className="text-white hover:text-gray-200 transition duration-300"
+                    className="text-white hover:text-gray-200 transition duration-300 pb-0.5"
                   >
                     Profile
-                  </Link>
+                  </NavLink>
                 </li>
                 <li>
                   <button
-                    className="text-white hover:text-gray-200 transition duration-300"
+                    className="text-white hover:text-gray-200 transition duration-300 pb-0.5"
                     onClick={() =>
                       logout({
                         logoutParams: { returnTo: window.location.origin },
