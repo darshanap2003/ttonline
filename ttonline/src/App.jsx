@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom"
-import Homepage from "./pages/Homepage"
 import Header from "./components/Header"
 import Footer from "./components/Footer"
+import Landing from "./pages/Landing"
 
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
      <BrowserRouter>
      <Header/>
       <Routes>
-        <Route path="/" element={<Homepage/>} exact/>
+        <Route path="/" element={<Landing/>} exact/>
       </Routes>
       <Footer/>
      </BrowserRouter>
