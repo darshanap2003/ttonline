@@ -18,7 +18,7 @@ const WorldMap = ({ onRegionClick }) => {
               scale: colorScale,
               values: countries,
               min: 0,
-              max: 300,
+              max: 200,
             },
           ],
         }}

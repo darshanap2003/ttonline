@@ -10,14 +10,15 @@ import Navbar from "./components/Navbar"
 const App = () => {
   return (
     <>
-     <BrowserRouter>
-     <Header/>
-      <Routes>
-        <Route path="/" element={<Landing/>} exact/>
-        <Route path="/petitions" element={<PetitionPage />} />
-      </Routes>
-      <Footer/>
-     </BrowserRouter>
+      <BrowserRouter>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Landing />} exact />
+          <Route path="/maps" element={<Homepage />} exact />
+          <Route path="/petitions" element={<PetitionPage />} />
+        </Routes>
+        <Footer />
+      </BrowserRouter>
     </>
   )
 }

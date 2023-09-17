@@ -1,10 +1,10 @@
-import { useAuth0 } from '@auth0/auth0-react';
-import { Link } from 'react-router-dom';
+import { useAuth0 } from "@auth0/auth0-react"
+import { Link } from "react-router-dom"
 
 const Header = () => {
-  const { isAuthenticated, loginWithPopup, logout } = useAuth0();
+  const { isAuthenticated, loginWithPopup, logout } = useAuth0()
   return (
-    <header className="bg-primary-500 py-4">
+    <header className="bg-primary-500 py-4 px-5">
       <div className="container mx-auto flex items-center justify-between">
         {/* Logo */}
         <Link to="/">
@@ -49,14 +49,24 @@ const Header = () => {
                   </Link>
                 </li>
                 <li>
-                  <button className="text-white hover:text-gray-200 transition duration-300" onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>
+                  <button
+                    className="text-white hover:text-gray-200 transition duration-300"
+                    onClick={() =>
+                      logout({
+                        logoutParams: { returnTo: window.location.origin },
+                      })
+                    }
+                  >
                     Logout
                   </button>
                 </li>
               </ul>
             ) : (
               <li>
-                <button className="text-white hover:text-gray-200 transition duration-300" onClick={loginWithPopup}>
+                <button
+                  className="text-white hover:text-gray-200 transition duration-300"
+                  onClick={loginWithPopup}
+                >
                   Login
                 </button>
               </li>
@@ -65,7 +75,7 @@ const Header = () => {
         </nav>
       </div>
     </header>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header
