@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom"
+import image from "../assets/equal-pay-promotion.jpg"
 
 const Landing = () => {
   return (
@@ -23,9 +24,8 @@ const Landing = () => {
             </Link>
           </div>
           <div>
-            {/* Add relevant image or visual here */}
             <img
-              src="/path/to/image.jpg"
+              src={image}
               alt="Promoting Equal Gender Pay"
               className="w-full rounded-md"
             />

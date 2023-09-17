@@ -2,11 +2,10 @@ import { BrowserRouter, Route, Routes } from "react-router-dom"
 import Header from "./components/Header"
 import Footer from "./components/Footer"
 import Landing from "./pages/Landing"
-import Homepage from "./pages/Homepage"
 import PetitionPage from "./pages/PetitionPage"
-
-import Navbar from "./components/Navbar"
-
+import About from "./pages/About"
+import Homepage from "./pages/Homepage"
+import Resources from "./pages/Resources"
 const App = () => {
   return (
     <>
@@ -15,7 +14,9 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Landing />} exact />
           <Route path="/maps" element={<Homepage />} exact />
-          <Route path="/petitions" element={<PetitionPage />} />
+          <Route path="/petition" element={<PetitionPage />} exact />
+          <Route path="/about" element={<About />} exact />
+          <Route path="/resources" element={<Resources />} exact />
         </Routes>
         <Footer />
       </BrowserRouter>
